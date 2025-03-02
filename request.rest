@@ -1,0 +1,22 @@
+GET http://localhost:5000/notes
+
+###
+POST http://localhost:5000/add-notes
+Content-Type: application/json
+
+{
+    "isi" : "Halo, percobaan pertama",
+    "label" : "Not Started"
+}
+
+###
+PUT http://localhost:5000/note/1
+Content-Type: application/json
+
+{
+    "isi" : "Halo, percobaan pertama",
+    "label" : "Done"
+}
+
+###
+DELETE http://localhost:5000/note/1
