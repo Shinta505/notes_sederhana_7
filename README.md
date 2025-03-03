@@ -12,7 +12,7 @@ cd Tugas_Notes
 ```
 
 ### **2. Menjalankan Backend**
-Buat Database di MySQL dengan nama **notes_shinta** <br>
+Buat Database di Admin MySQL dengan nama **notes_shinta** <br>
 Kemudian Start XAMPP di bagian module MySQL
 
 ```terminal
