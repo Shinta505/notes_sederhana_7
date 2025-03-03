@@ -19,8 +19,15 @@ Kemudian Start XAMPP di bagian module MySQL
 cd backend
 npm -v         # Cek versi npm
 npm init -y    # Inisialisasi project Node.js
+```
+```terminal
 npm install mysql2 cors express sequelize  # Install dependencies utama
 npm install nodemon  # Install nodemon untuk live reload
+npm i -g nodemon # Install nodemon secara global
+
+nodemon -v   # Cek versi nodemon
+```
+```terminal
 nodemon index  # Jalankan server dengan nodemon
 ```
 
