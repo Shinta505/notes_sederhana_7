@@ -1,4 +1,5 @@
 # Tugas Notes
+![Welcome Page (Add)](https://github.com/user-attachments/assets/df75c7e8-58ff-4b73-8dcc-104799ad7a51)
 
 Tugas Notes adalah aplikasi catatan sederhana berbasis web dengan backend menggunakan Express.js dan frontend menggunakan HTML, CSS, serta JavaScript.
 
