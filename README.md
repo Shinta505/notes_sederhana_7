@@ -3,29 +3,6 @@
 
 Tugas Notes adalah aplikasi catatan sederhana berbasis web dengan backend menggunakan Express.js dan frontend menggunakan HTML, CSS, serta JavaScript.
 
-## 📂 Struktur Proyek
-
-```
-Tugas_Notes/
-│── backend/       # Backend dengan Express.js
-│   ├── config/    # Konfigurasi database / environment
-│   ├── controllers/ # Logika bisnis aplikasi
-│   ├── models/    # Struktur data / model database
-│   ├── routes/    # Endpoint API
-│   ├── index.js   # File utama server
-│   ├── package.json # Dependensi backend
-│
-│── frontend/      # Frontend dengan HTML, CSS, JS
-│   ├── index.html  # Halaman utama
-│   ├── welcome.html # Halaman selamat datang
-│   ├── edit.html   # Halaman edit catatan
-│   ├── script.js   # JavaScript utama
-│   ├── styles.css  # CSS untuk styling
-│   ├── bg.png      # Gambar latar belakang
-│
-│── README.md       # Dokumentasi proyek
-```
-
 ## 🚀 Instalasi & Menjalankan Proyek
 
 ### **1. Clone Repository**
