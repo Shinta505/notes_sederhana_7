@@ -56,6 +56,3 @@ Cukup buka `index.html` di browser.
 
 ## 🤝 Kontribusi
 Silakan fork repository ini dan ajukan pull request untuk perbaikan atau penambahan fitur.
-
-## 📜 Lisensi
-Proyek ini menggunakan lisensi MIT.
