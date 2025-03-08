@@ -28,7 +28,7 @@ npm i -g nodemon # Install nodemon secara global
 nodemon -v   # Cek versi nodemon
 ```
 ```terminal
-nodemon index  # Jalankan server dengan nodemon
+nodemon index  # Jalankan server dengan nodemon. Pastikan XAMPP dan Nama Database nya sama
 ```
 
 ### **3. Menjalankan Frontend**
