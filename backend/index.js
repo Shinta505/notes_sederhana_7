@@ -8,4 +8,4 @@ app.use(cors());
 app.use(express.json());
 app.use(NoteRoute);
 
-app.listen(5000, () => console.log("Server connected"));
+app.listen(5000, "0.0.0.0", () => console.log("Server connected on port 5000"));
