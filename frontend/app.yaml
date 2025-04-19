@@ -1,5 +1,7 @@
 runtime: python39
 
+services: frontend-shinta
+
 handlers:
   - url: /
     static_files: welcome.html
