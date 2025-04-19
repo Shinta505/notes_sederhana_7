@@ -1,6 +1,5 @@
 runtime: python39
-
-services: frontend-shinta
+service: frontend-shinta
 
 handlers:
   - url: /
