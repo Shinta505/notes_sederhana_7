@@ -3,6 +3,6 @@ service: frontend-shinta
 
 handlers:
   - url: /static
-    static_dir: frontend
+    static_dir: .
   - url: /.*
     script: auto
