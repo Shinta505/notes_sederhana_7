@@ -3,8 +3,8 @@ service: frontend-shinta
 
 handlers:
   - url: /
-    static_files: welcome.html
-    upload: welcome.html
+    static_files: index.html
+    upload: index.html
 
   - url: /(.*)
     static_files: \1

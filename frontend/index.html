@@ -1,47 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login User</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="container">
-        <h2>Notes List</h2>
-        <h2 id="welcomeMessage">Welcome!</h2>
+  <div class="login-wrapper">
+    <div class="container login-box">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
 
-        <form id="addNoteForm">
-            <input type="text" id="isi" placeholder="Masukkan isi catatan" required>
-            <input type="text" id="label" placeholder="Masukkan label catatan" required>
-            <button type="submit" class="btn">Tambah Catatan</button> <br>
-        </form>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
 
-        <table>
-            <thead>
-                <tr>
-                    <th><input type="checkbox" id="selectAll"></th>
-                    <th>ID</th>
-                    <th>Isi</th>
-                    <th>Label</th>
-                    <th>Created At</th>
-                    <th>Updated At</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Data akan diisi dari script.js -->
-            </tbody>
-        </table>
-
-        <!-- Tombol delete di luar tabel -->
-        <button id="deleteSelected" class="btn delete-btn">Delete Selected</button>
-        <button id="logoutBtn" class="btn logout-btn">Logout</button>
+        <button type="submit">Login</button>
+      </form>
+      <p class="register-link">Belum punya akun? <a href="register.html">Register di sini</a></p>
+      <div id="loginMessage"></div>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="login.js"></script>
 </body>
-
 </html>

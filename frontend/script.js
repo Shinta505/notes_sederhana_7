@@ -3,6 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const deleteSelectedBtn = document.getElementById("deleteSelected");
     const selectAllCheckbox = document.getElementById("selectAll");
 
+    const token = localStorage.getItem("accessToken");
+    if (!token) {
+        alert("Anda harus login terlebih dahulu!");
+        window.location.href = "index.html";
+        return; // agar sisa script tidak jalan
+    }
+
     // Fungsi untuk memformat tanggal
     function formatDate(timestamp) {
         const date = new Date(timestamp);
@@ -17,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fetch data dari backend
     function fetchNotes() {
-        fetch("https://backend-103949415038.us-central1.run.app/notes")
+        fetch("https://localhost:5000/notes")
             .then(response => response.json())
             .then(data => {
                 tableBody.innerHTML = "";
@@ -47,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const isi = document.getElementById("isi").value;
         const label = document.getElementById("label").value;
 
-        fetch("https://backend-103949415038.us-central1.run.app/add-notes", {
+        fetch("https://localhost:5000/add-notes", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ isi, label })
@@ -84,34 +91,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (confirm(`Yakin ingin menghapus ${selectedIds.length} catatan?`)) {
             selectedIds.forEach(id => {
-                fetch(`https://backend-103949415038.us-central1.run.app/note/${id}`, { method: "DELETE" })
+                fetch(`https://localhost:5000/note/${id}`, { method: "DELETE" })
                     .then(() => fetchNotes());
             });
         }
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const username = localStorage.getItem("username");
-    if (username) {
-        document.getElementById("welcomeMessage").textContent = `Welcome, ${username}!`;
-    } else {
-        window.location.href = "welcome.html"; // Redirect jika belum ada nama
-    }
-});
+    const logoutBtn = document.getElementById("logoutBtn");
 
-document.addEventListener("DOMContentLoaded", function () {
-    const username = localStorage.getItem("username");
-
-    if (!username) {
-        window.location.href = "welcome.html"; // Jika belum ada username, redirect ke welcome
-    } else {
-        document.getElementById("welcomeMessage").textContent = `Welcome, ${username}!`;
-    }
-
-    // Logout Function
-    document.getElementById("logoutBtn").addEventListener("click", function () {
-        localStorage.removeItem("username"); // Hapus data nama user
-        window.location.href = "welcome.html"; // Redirect ke halaman awal
+    logoutBtn.addEventListener("click", function () {
+        fetch("http://localhost:5000/logout", {
+            method: "DELETE",
+            credentials: "include"
+        })
+            .then(response => {
+                if (response.ok) {
+                    localStorage.removeItem("accessToken"); // hapus token
+                    alert("Logout berhasil");
+                    window.location.href = "index.html";
+                } else {
+                    alert("Logout gagal");
+                }
+            })
+            .catch(error => {
+                console.error("Error saat logout:", error);
+                alert("Logout gagal karena kesalahan jaringan");
+            });
     });
 });
+

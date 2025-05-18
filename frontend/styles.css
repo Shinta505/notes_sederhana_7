@@ -133,3 +133,25 @@ tr:nth-child(even) {
     display: block;
     width: 100%;
 }
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+input:focus {
+    border-color: #bb377d;
+    box-shadow: 0 0 5px rgba(187, 55, 125, 0.5);
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>API Documentation</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        margin: 20px;
+        color: #333;
+      }
+      h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 5px;
+      }
+      .section {
+        margin-bottom: 40px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      table thead tr {
+        background-color: #3498db;
+        color: white;
+        text-align: left;
+      }
+      table th, table td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+      }
+      table tbody tr:nth-child(even) {
+        background-color: #f2f6fc;
+      }
+      table tbody tr:hover {
+        background-color: #d6eaff;
+      }
+      .subtitle {
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <h3>API TCC Pertemuan 7</h3>
+      <div class="subtitle">Daftar Endpoint API:</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Metode</th>
+            <th>Endpoint</th>
+            <th>Deskripsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>POST</td><td>/login</td><td>Login menggunakan email dan password.</td></tr>
+          <tr><td>DELETE</td><td>/logout</td><td>Logout User.</td></tr>
+          <tr><td>GET</td><td>/token</td><td>Mengambil access token menggunakan refresh token.</td></tr>
+          <tr><td>GET</td><td>/users</td><td>Mengambil seluruh data dari tabel users.</td></tr>
+          <tr><td>GET</td><td>/users/:id</td><td>Mengambil data dari tabel users berdasarkan id.</td></tr>
+          <tr><td>POST</td><td>/users</td><td>Menambahkan data baru ke tabel users.</td></tr>
+          <tr><td>PUT</td><td>/users/:id</td><td>Mengubah data dari tabel users berdasarkan id.</td></tr>
+          <tr><td>DELETE</td><td>/users/:id</td><td>Menghapus data dari tabel users berdasarkan id.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h3>API Notes</h3>
+      <div class="subtitle">Daftar Endpoint API Notes:</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Metode</th>
+            <th>Endpoint</th>
+            <th>Deskripsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>GET</td><td>/notes</td><td>Mengambil seluruh catatan.</td></tr>
+          <tr><td>POST</td><td>/add-notes</td><td>Menambahkan catatan baru ke tabel notes.</td></tr>
+          <tr><td>PUT</td><td>/note/:id</td><td>Memperbarui catatan berdasarkan ID Note.</td></tr>
+          <tr><td>DELETE</td><td>/note/:id</td><td>Menghapus catatan berdasarkan ID Note.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
